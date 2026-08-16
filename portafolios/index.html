@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio — Jeomar</title>
+  <meta name="description" content="Portafolio personal de Jeomar — proyectos, información profesional y blog sobre salud pública." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="name">Jeomar Reyes</h1>
+        <p class="matricula">Matrícula: <strong>16-SIST-2-005</strong></p>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="https://sites.google.com/view/lospeligrosdeltabaco/página-principal">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <div class="hero-left">
+        <img src="fotografia.jpg" alt="Fotografía de Jeomar" class="foto-personal" />
+      </div>
+      <div class="hero-right">
+        <h2>Desarrollador / Estudiante / Investigador</h2>
+        <p class="lead">Apasionado por la salud pública, la educación y el desarrollo web. Me especializo en proyectos que combinan tecnología y comunicación para generar impacto social.</p>
+        <div class="cta">
+          <a class="btn" href="#proyectos">Ver proyectos</a>
+          <a class="btn ghost" href="#contacto">Contactar</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="container card">
+      <h3>Información personal y profesional</h3>
+      <p><strong>Nombre:</strong> Jeomar Reyes</p>
+      <p><strong>Matrícula:</strong> 16-SIST-2-005</p>
+      <p><strong>Formación:</strong> Ingenieria en Sistemas</p>
+      <p><strong>Resumen profesional:</strong> Experiencia en campañas de prevención, redacción de contenidos educativos y desarrollo de sitios web informativos. Interés en investigación y comunicación para la salud.</p>
+      <p><strong>Habilidades:</strong> HTML, CSS, JavaScript básico; redacción científica; diseño de materiales educativos; trabajo en equipo.</p>
+    </section>
+
+    <section id="proyectos" class="container">
+      <h3>Proyectos destacados</h3>
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="proyecto1.jpg" alt="Imagen proyecto 1" class="project-thumb" />
+          <h4>Los Peligros Del Tabaco</h4>
+          <p>Material educativo para estudiantes sobre riesgos del tabaco.</p>
+          <a class="project-link" href="https://sites.google.com/view/lospeligrosdeltabaco/página-principal">Acceder al blog del examen parcial</a>
+        </article>
+
+        <article class="project-card">
+          <img src="proyecto2.png" alt="Imagen proyecto 2" class="project-thumb" />
+          <h4>Portal informativo</h4>
+          <p>Nuestro Juego De Número Magico.</p>
+          <a class="project-link" href="https://fifolh.github.io/juego-numero-secreto/juego.html">Ver proyecto</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contacto" class="container card">
+      <h3>Contacto</h3>
+      <p><strong>Email:</strong> <a href="mailto:tu.email@ejemplo.com">ultrajeo@gmail.com</a></p>
+      <p><strong>Formulario:</strong> <a href="https://forms.gle/tccH5DcUCRLG4xxx9" target="_blank" rel="noopener">formulario</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jeomar — Portafolio personal</p>
+    </div>
+  </footer>
+
+  <script>
+    // Actualiza año en el pie de página
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const cards = document.querySelectorAll('.project-card');
+
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+      card.style.transform = 'scale(1.05)';
+      card.style.transition = 'transform 0.3s ease';
+      card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.3)';
+      });
+
+      card.addEventListener('mouseleave', () => {
+      card.style.transform = 'scale(1)';
+      card.style.boxShadow = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
